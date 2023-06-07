@@ -19,7 +19,10 @@ function performAction(e){
         // console.log(data.main.temp);
         postData('/add', {date: newDate, temperature: data.main.temp, userResponse: userFeeling} )
     })
-    .then(updateUI())
+    .then(function(data){
+        updateUI()
+    })
+    // .then(updateUI())
     
 }
 
@@ -70,16 +73,3 @@ const updateUI = async () => {
       console.log("error", error);
     }
   }
-
-  
-  
-
-
-
-
-
-
-
-
-
-

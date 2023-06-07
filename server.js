@@ -47,7 +47,6 @@ function addUserInput (req, res){
         temperature: req.body.temperature,
         userResponse: req.body.userResponse
     }
-    // projectData.push(newEntry);
     res.send(projectData);
     // console.log(projectData);
 }

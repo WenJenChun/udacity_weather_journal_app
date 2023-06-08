@@ -19,10 +19,14 @@ function performAction(e){
         // console.log(data.main.temp);
         postData('/add', {date: newDate, temperature: data.main.temp, userResponse: userFeeling} )
     })
-    .then(function(data){
-        updateUI()
-    })
-    // .then(updateUI())
+
+    // ==== 2 ways to update UI: ====
+    // ==== 1 give it a function ====
+    // .then(function(data){
+    //     updateUI()
+    // })
+    // ==== 2 accept function refrence instead function call====
+    .then(updateUI)
     
 }
 

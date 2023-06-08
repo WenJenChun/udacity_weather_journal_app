@@ -20,14 +20,13 @@ function performAction(e){
         postData('/add', {date: newDate, temperature: data.main.temp, userResponse: userFeeling} )
     })
 
-    // ==== 2 ways to update UI: ====
+    // ==== Two ways to update UI: ====
     // ==== 1 give it a function ====
     // .then(function(data){
     //     updateUI()
     // })
-    // ==== 2 accept function refrence instead function call====
-    .then(updateUI)
-    
+    // ==== 2 then accept function refrence instead function call ====
+    .then(updateUI)   
 }
 
 //post user input data
